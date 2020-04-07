@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+                margin: 0;
+            }
+
+            .hidden {
+                display: none !important;
+            }
+
+            h1 {
+                color: white;
+                font-size: 42px;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .winner {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                z-index: 1;
+                text-align: center;
+                height: 100vh;
+                width: 100vw;
+            }
+
+            .banner {
+                display: block;
+                justify-content: right;
+                align-items: right;
+                position: absolute;
+
+            }
+
+            .container {
+                display: block;
+                position: absolute;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+            .spicy {
+                color: red;
+            }
+
+            .play {
+                font-size: 20px;
+                background: black;
+                padding: 5px 10px;
+                color: white;
+                display: flex;
+                position: relative;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="banner">
+            <ul>
+                <li><button id="veryEasy">Very Easy</button></li>
+                <li><button id="easy">Easy</button></li>
+                <li><button id="difficult">Difficult</button></li>
+                <li><button id="spicy">Spicy</button></li>
+            </ul>
+        </div>
+        <div class="winner hidden">
+            <h1>You did it!</h1><br>
+            <p><button class="play">Play Again!</button></p>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

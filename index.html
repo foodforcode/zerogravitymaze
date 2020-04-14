@@ -7,6 +7,9 @@
         <style>
             body {
                 margin: 0;
+                background-color:#18181D;
+                font-family: 'Poppins', sans-serif;
+                color: #FFFFFF;
             }
 
             .hidden {
@@ -16,7 +19,6 @@
             h1 {
                 color: white;
                 font-size: 42px;
-                font-family: 'Poppins', sans-serif;
             }
 
             .winner {
@@ -27,54 +29,76 @@
                 position: absolute;
                 z-index: 1;
                 text-align: center;
-                height: 100vh;
-                width: 100vw;
+                height: 90%;
+                width: 100%;
+            }
+            .wrap {
+                width: 100%;
             }
 
             .banner {
                 display: block;
-                justify-content: right;
-                align-items: right;
-                position: absolute;
-
+                position:relative;
+                background: #18181D;
+                height: 10%;
+                text-align: right;
+                right: 10px;
+                flex-direction: row-reverse;
             }
 
-            .container {
-                display: block;
-                position: absolute;
+            span {
+                color: #FFFFFF;
+                float: left;
+                margin: 0 10px;
             }
 
-            ul {
-                list-style-type: none;
+            .level, #newGame {
+                border: none;
+                background: none;
+                text-transform: uppercase;
+                height: 100%;
+                font-weight: 700;
+                color: rgb(55, 94, 221);
+                font-size: inherit;
+                transition: all 0.4s;
+                outline: none;
             }
 
-            .spicy {
+            #spicy {
                 color: red;
             }
 
-            .play {
+            #reset {
                 font-size: 20px;
                 background: black;
                 padding: 5px 10px;
                 color: white;
                 display: flex;
                 position: relative;
-                
+                box-shadow: 0px 0px 7px rgba(255, 255, 255, 1.0);
+            }
+
+            .selected {
+                border: 3px white solid;
             }
         </style>
     </head>
     <body>
-        <div class="banner">
-            <ul>
-                <li><button id="veryEasy">Very Easy</button></li>
-                <li><button id="easy">Easy</button></li>
-                <li><button id="difficult">Difficult</button></li>
-                <li><button id="spicy">Spicy</button></li>
-            </ul>
+        <div class="wrap">
+            <div class="controls">
+            <div class="banner">
+                <span><button id="newGame">Start Over</button></span>
+                Select a level to open:
+                    <button class="level" id="peasy">Peasy</button>
+                    <button class="level" id="easy">Easy</button>
+                    <button class="level" id="normal">Normal</button>
+                    <button class="level" id="difficult">Difficult</button>
+                    <button class="level" id="spicy">Spicy</button>
+            </div>
         </div>
         <div class="winner hidden">
-            <h1>You did it!</h1><br>
-            <p><button class="play">Play Again!</button></p>
+            <h1>You did it!</h1>
+            <p><button id="reset">Play Again</button></p>
         </div>
         <script src="index.js"></script>
     </body>
